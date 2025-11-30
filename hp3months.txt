@@ -100,12 +100,7 @@
 
 <div class="container" id="main">
   <div id="letter">
-    <h2>Heesuh, happy three months ❤️</h2>
-    <p>to my baby. my girlfriend. my beautiful girl. my sweet girl. my only. my future. mine.<br><br>
-    I fell for your smile, the way your eyes sparkle when you look up at me, the way you make my heart smile when we hug. you make feel as warm as a a good sunrise edit.<br><br>
-    It's hard for me to express my feelings too deeply as of yet but I wish to share more of myself and understand more of yours in months to come.<br><br>
-    Though the three months we've had has been full of ups and downs, I am truly grateful to have met you and can't wait to spend time with you and go on dates in Seoul and play more mincraft together and beat the ender dragon and watch cute anime.<br><br>
-    <strong>From Sung ❤️</strong>
+    <h2
     </p>
   </div>
   <img src="IMG_6799.jpeg" alt="Us" style="width:300px; margin-top:20px; border-radius:15px; box-shadow:0 0 10px rgba(0,0,0,0.3);" />
