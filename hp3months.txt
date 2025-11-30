@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy three months <3 </title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: pink;
+      overflow: hidden;
+    }
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .heart {
+      position: absolute;
+      color: red;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 1; }
+      100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+    }
+
+    .container {
+      position: relative;
+      z-index: 2;
+      display: none;
+      text-align: center;
+      padding: 40px;
+    }
+    #letter {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      font-size: 1.2rem;
+    }
+    #bear {
+      font-size: 80px;
+      margin-top: 20px;
+    }
+
+    #password-screen {
+      z-index: 3;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255,182,193,0.95);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+    input {
+      padding: 10px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      margin-top: 10px;
+      text-align: center;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: none;
+      background: red;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="password-screen">
+  <div>Enter Password 💕</div>
+  <input type="password" id="pw" />
+  <button onclick="checkPassword()">Open</button>
+</div>
+
+<div class="hearts" id="hearts"></div>
+
+<div class="container" id="main">
+  <div id="letter">
+    <h2>Heesuh, happy three months ❤️</h2>
+    <p>to my baby. my girlfriend. my beautiful girl. my sweet girl. my only. my future. mine.<br><br>
+    I fell for your smile, the way your eyes sparkle when you look up at me, the way you make my heart smile when we hug. you make feel as warm as a a good sunrise edit.<br><br>
+    It's hard for me to express my feelings too deeply as of yet but I wish to share more of myself and understand more of yours in months to come.<br><br>
+    Though the three months we've had has been full of ups and downs, I am truly grateful to have met you and can't wait to spend time with you and go on dates in Seoul and play more mincraft together and beat the ender dragon and watch cute anime.<br><br>
+    <strong>From Sung ❤️</strong>
+    </p>
+  </div>
+  <img src="IMG_6799.jpeg" alt="Us" style="width:300px; margin-top:20px; border-radius:15px; box-shadow:0 0 10px rgba(0,0,0,0.3);" />
+  <div id="bear">🐻</div>
+</div>
+
+<script>
+  // PASSWORD
+  const correctPassword = "mandu"; // <-- CHANGE THIS
+  function checkPassword() {
+    const pw = document.getElementById("pw").value;
+    if (pw === correctPassword) {
+      document.getElementById("password-screen").style.display = "none";
+      document.getElementById("main").style.display = "block";
+    } else {
+      alert("Wrong password ☹️");
+    }
+  }
+
+  // FLOATING HEARTS
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = (20 + Math.random()*30) + "px";
+    heart.style.animationDuration = (4 + Math.random()*4) + "s";
+    document.getElementById("hearts").appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+  }
+  setInterval(createHeart, 300);
+</script>
+
+</body>
+</html>
